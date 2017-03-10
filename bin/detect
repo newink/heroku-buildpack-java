@@ -2,8 +2,6 @@
 # bin/use <build-dir>
 
 if [ -f $1/pom.xml ]; then
-	echo "Kek Lul"
-	./mvnw install:install-file -Dfile=ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar
    echo "Java" && exit 0
 else
   echo "no" && exit 1
