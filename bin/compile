@@ -25,7 +25,10 @@ install_java_with_overlay ${BUILD_DIR}
 
 #create the cache dir if it doesn't exist
 mkdir -p $CACHE_DIR
-echo "Mark HERE!"
+echo "\n cache dir "
+echo $CACHE_DIR
+echo "\n build dir"
+echo $BUILD_DIR
 mvn install:install-file -Dfile=ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar
 
 run_mvn "compile" $BUILD_DIR $CACHE_DIR
